@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    consul:
+      host: localhost
+
+security:
+  oauth2:
+    resource:
+      #id: service1
+      #user-info-uri: http://localhost:8080/auth/user
+      #prefer-token-info: false
+      jwt:
+        key-uri: http://localhost:8080/auth/oauth/token_key

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: service1
+
+  profiles:
+    active: dev
+
+server:
+  port: 10002

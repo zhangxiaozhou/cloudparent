@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: ssoclient1
+  profiles:
+    active: dev
+  cloud:
+    consul:
+      discovery:
+        register: false
+
+
+server:
+  port: 9999
+  servlet:
+    context-path: /client1

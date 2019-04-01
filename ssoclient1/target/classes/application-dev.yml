@@ -1,0 +1,16 @@
+security:
+  oauth2:
+    client:
+      accessTokenUri: http://localhost:8080/auth/oauth/token
+      userAuthorizationUri: http://localhost:8080/auth/oauth/authorize
+      clientId: client1
+      clientSecret: secret
+      authorized-grant-types: authorization_code
+    resource:
+      userInfoUri: http://localhost:8080/auth/user
+
+spring:
+  cloud:
+    consul:
+      discovery:
+        hostname: localhost
