@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/authserver" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/configserver" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service1" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ssoclient1" charset="UTF-8" />
