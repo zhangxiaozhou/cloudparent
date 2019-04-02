@@ -8,8 +8,6 @@ spring:
     username: guest
     password: guest
 
-  profiles:
-    active: dev
   cloud:
     config:
       uri: http://localhost:8888
@@ -18,8 +16,12 @@ spring:
 server:
   port: 10002
 
+
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+feign:
+  hystrix:
+    enabled: true

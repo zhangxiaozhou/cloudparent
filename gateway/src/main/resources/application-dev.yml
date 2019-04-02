@@ -16,3 +16,7 @@ security:
       jwt:
         key-uri: http://localhost:8080/auth/oauth/token_key
       prefer-token-info: false
+
+ribbon:
+  ReadTimeout: 20000
+  SocketTimeout: 20000
