@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: service2
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8888
+      profile: dev
+
+server:
+  port: 10003
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
