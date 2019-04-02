@@ -2,6 +2,12 @@ spring:
   application:
     name: service1
 
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
   profiles:
     active: dev
   cloud:
@@ -11,3 +17,9 @@ spring:
 
 server:
   port: 10002
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

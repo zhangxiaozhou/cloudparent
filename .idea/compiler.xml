@@ -9,6 +9,7 @@
         <module name="gateway" />
         <module name="ssoclient2" />
         <module name="ssoclient1" />
+        <module name="service2" />
         <module name="service1" />
         <module name="authserver" />
         <module name="configserver" />
@@ -20,6 +21,7 @@
       <module name="configserver" target="1.8" />
       <module name="gateway" target="1.8" />
       <module name="service1" target="1.8" />
+      <module name="service2" target="1.8" />
       <module name="ssoclient1" target="1.8" />
       <module name="ssoclient2" target="1.8" />
     </bytecodeTargetLevel>
@@ -30,6 +32,7 @@
       <module name="configserver" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="service1" options="-parameters" />
+      <module name="service2" options="-parameters" />
       <module name="ssoclient1" options="-parameters" />
       <module name="ssoclient2" options="-parameters" />
     </option>
