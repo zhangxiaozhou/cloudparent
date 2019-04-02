@@ -1,4 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
+**/**.iml
+
 将删除 .gitignore
 将删除 authserver/src/test/
 将删除 authserver/target/generated-sources/
@@ -12,4 +14,10 @@
 将删除 ssoclient2/src/main/java/com/zxz/clouddemo/api/
 将删除 ssoclient2/src/test/
 将删除 ssoclient2/target/generated-sources/
-**/**.iml
+将删除 authserver/target/
+将删除 configserver/target/
+将删除 gateway/target/
+将删除 service1/target/
+将删除 ssoclient1/target/
+将删除 ssoclient2/target/
+将删除 configserver/target/generated-sources/

@@ -14,6 +14,7 @@
         <module>ssoclient2</module>
         <module>gateway</module>
         <module>service1</module>
+        <module>configserver</module>
     </modules>
 
     <name>cloudparent</name>
