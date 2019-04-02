@@ -1,18 +1,10 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /auth
+
 spring:
   application:
     name: authserver
-  cloud:
-    config:
-      uri: http://localhost:8888
-      skipSslValidation: true
-      request-read-timeout: 0
-      profile: dev
-
-server:
-  servlet:
-    context-path: /auth
-  port: 8080
-
-logging:
-  level:
-    root: info
+  profiles:
+    active: dev
