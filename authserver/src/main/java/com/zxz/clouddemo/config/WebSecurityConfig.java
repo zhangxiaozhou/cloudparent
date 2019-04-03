@@ -37,7 +37,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 // 其余所有请求全部需要鉴权认证
                 .and().authorizeRequests()
 
-                .antMatchers("/oauth/token_key**", "/refresh", "/actuator/refresh", "/bus/refresh").permitAll()
+                .antMatchers("/oauth/token_key**", "/refresh", "/actuator/**", "/bus/refresh").permitAll()
                 .anyRequest().authenticated()
                 // 由于使用的是JWT，我们这里不需要csrf
                 .and().csrf().disable();

@@ -11,6 +11,7 @@
         <module name="ssoclient1" />
         <module name="service2" />
         <module name="service1" />
+        <module name="gateway2" />
         <module name="authserver" />
         <module name="configserver" />
       </profile>
@@ -20,6 +21,7 @@
       <module name="cloudparent" target="1.8" />
       <module name="configserver" target="1.8" />
       <module name="gateway" target="1.8" />
+      <module name="gateway2" target="1.8" />
       <module name="service1" target="1.8" />
       <module name="service2" target="1.8" />
       <module name="ssoclient1" target="1.8" />
@@ -31,6 +33,7 @@
       <module name="authserver" options="-parameters" />
       <module name="configserver" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="gateway2" options="-parameters" />
       <module name="service1" options="-parameters" />
       <module name="service2" options="-parameters" />
       <module name="ssoclient1" options="-parameters" />

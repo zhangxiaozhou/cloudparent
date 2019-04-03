@@ -16,6 +16,7 @@
         <module>service1</module>
         <module>configserver</module>
         <module>service2</module>
+        <module>gateway2</module>
     </modules>
 
     <name>cloudparent</name>

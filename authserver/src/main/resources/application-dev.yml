@@ -8,3 +8,9 @@ spring:
       auto-commit: false
       maximum-pool-size: 100
       minimum-idle: 20
+
+  cloud:
+    consul:
+      host: localhost
+      discovery:
+        health-check-path: ${server.servlet.context-path:}/actuator/health
