@@ -2,19 +2,20 @@ spring:
   application:
     name: service1
 
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
-
   cloud:
+    consul:
+      host: localhost
+
     config:
       uri: http://localhost:8888
       profile: dev
 
 server:
   port: 10002
+
+ribbon:
+  ReadTimeout: 20000
+  SocketTimeout: 20000
 
 
 management:
@@ -25,3 +26,21 @@ management:
 feign:
   hystrix:
     enabled: true
+
+security:
+  oauth2:
+    client:
+      client-id: service1
+      client-secret: secret
+      #access-token-uri: http://localhost:8080/auth/oauth/token
+      #user-authorization-uri: http://localhost:8080/auth/oauth/authorize
+      #grant-type: authorization_code
+      #scope: all
+    resource:
+      jwt:
+        key-uri: http://localhost:8080/auth/oauth/token_key
+      token-info-uri: http://localhost:8080/auth/oauth/check_token
+
+
+
+
