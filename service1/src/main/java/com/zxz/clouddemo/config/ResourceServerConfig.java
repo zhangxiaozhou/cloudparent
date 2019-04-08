@@ -1,7 +1,11 @@
 package com.zxz.clouddemo.config;
 
+import org.springframework.boot.autoconfigure.security.oauth2.resource.UserInfoRestTemplateFactory;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.oauth2.client.OAuth2RestTemplate;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 
@@ -18,6 +22,10 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .anyRequest().authenticated();
     }
 
-
+    @LoadBalanced
+    @Bean
+    public OAuth2RestTemplate oAuth2RestTemplate(UserInfoRestTemplateFactory factory) {
+        return factory.getUserInfoRestTemplate();
+    }
 
 }

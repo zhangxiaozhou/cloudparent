@@ -1,16 +1,15 @@
-package com.zxz.clouddemo.feignclients;
+package com.zxz.clouddemo.servicesclients;
 
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.oauth2.client.OAuth2RestTemplate;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RequestMapping;
-
 import javax.annotation.Resource;
 
+/**
+ * 演示ribbon调用下游服务时传递token，主要通过 oAuth2RestTemplate
+ */
 @Component
-public class Service2Client {
+public class Service2RibbonClient {
 
 
     @Resource

@@ -41,6 +41,7 @@ security:
         key-uri: http://localhost:8080/auth/oauth/token_key
       token-info-uri: http://localhost:8080/auth/oauth/check_token
 
-
-
+#这里很重要，feign就是通过这里获取到token然后传递给下游，折腾我好久。。。
+hystrix:
+  shareSecurityContext: true
 
