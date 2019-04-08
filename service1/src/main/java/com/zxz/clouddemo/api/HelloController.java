@@ -34,8 +34,8 @@ public class HelloController {
 
         WebApplicationContext webApplicationContext = WebApplicationContextUtils.getWebApplicationContext(request.getServletContext());
 
-        //return "hello world!" + service2RibbonClient.getHost();
+        return "hello world!" + service2RibbonClient.getHost();
 
-        return service2FeignClient.getHost();
+        //return service2FeignClient.getHost();
     }
 }

@@ -31,9 +31,9 @@ management:
 
 security:
   oauth2:
-    #client:
-      #client-id: service2
-      #client-secret: secret
+    client:
+      client-id: service2
+      client-secret: secret
       #access-token-uri: http://localhost:8080/auth/oauth/token
       #user-authorization-uri: http://localhost:8080/auth/oauth/authorize
       #grant-type: authorization_code
