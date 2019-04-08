@@ -2,18 +2,23 @@ spring:
   application:
     name: service2
 
-
   cloud:
     consul:
       host: localhost
-
     config:
       uri: http://localhost:8888
       profile: dev
 
-
   profiles:
     active: dev
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1
+    web:
+      client:
+        enabled: true
 
 server:
   port: 10003
@@ -26,9 +31,9 @@ management:
 
 security:
   oauth2:
-    client:
-      client-id: service2
-      client-secret: secret
+    #client:
+      #client-id: service2
+      #client-secret: secret
       #access-token-uri: http://localhost:8080/auth/oauth/token
       #user-authorization-uri: http://localhost:8080/auth/oauth/authorize
       #grant-type: authorization_code
@@ -36,4 +41,4 @@ security:
     resource:
       jwt:
         key-uri: http://localhost:8080/auth/oauth/token_key
-      token-info-uri: http://localhost:8080/auth/oauth/check_token
+      #token-info-uri: http://localhost:8080/auth/oauth/check_token

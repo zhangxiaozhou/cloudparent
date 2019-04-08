@@ -9,6 +9,14 @@ spring:
     config:
       uri: http://localhost:8888
       profile: dev
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1
+    web:
+      client:
+        enabled: true
 
 server:
   port: 10002
@@ -27,11 +35,12 @@ feign:
   hystrix:
     enabled: true
 
+
 security:
   oauth2:
-    client:
-      client-id: service1
-      client-secret: secret
+    #client:
+      #client-id: service1
+      #client-secret: secret
       #access-token-uri: http://localhost:8080/auth/oauth/token
       #user-authorization-uri: http://localhost:8080/auth/oauth/authorize
       #grant-type: authorization_code
@@ -39,7 +48,7 @@ security:
     resource:
       jwt:
         key-uri: http://localhost:8080/auth/oauth/token_key
-      token-info-uri: http://localhost:8080/auth/oauth/check_token
+      #token-info-uri: http://localhost:8080/auth/oauth/check_token
 
 #这里很重要，feign就是通过这里获取到token然后传递给下游，折腾我好久。。。
 hystrix:
