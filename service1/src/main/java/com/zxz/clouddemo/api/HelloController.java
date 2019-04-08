@@ -2,6 +2,8 @@ package com.zxz.clouddemo.api;
 
 import com.zxz.clouddemo.servicesclients.Service2FeignClient;
 import com.zxz.clouddemo.servicesclients.Service2RibbonClient;
+import com.zxz.clouddemo.servicesclients.Service3FeignClient;
+import com.zxz.clouddemo.servicesclients.Service3RibbonClient;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,6 +27,12 @@ public class HelloController {
     @Resource
     private Service2FeignClient service2FeignClient;
 
+    @Resource
+    private Service3RibbonClient service3RibbonClient;
+
+    @Resource
+    private Service3FeignClient service3FeignClient;
+
     @RequestMapping("/world")
     public String world(Principal principal){
 
@@ -34,8 +42,12 @@ public class HelloController {
 
         WebApplicationContext webApplicationContext = WebApplicationContextUtils.getWebApplicationContext(request.getServletContext());
 
-        return "hello world!" + service2RibbonClient.getHost();
+        //return "hello world!" + service2RibbonClient.getHost();
 
-        //return service2FeignClient.getHost();
+        return service2FeignClient.getHost();
+
+        //return service3RibbonClient.sayHi();
+
+        //return service3FeignClient.hi();
     }
 }

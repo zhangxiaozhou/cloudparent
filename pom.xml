@@ -13,10 +13,12 @@
         <module>ssoclient1</module>
         <module>ssoclient2</module>
         <module>gateway</module>
-        <module>service1</module>
-        <module>configserver</module>
-        <module>service2</module>
         <module>gateway2</module>
+        <module>configserver</module>
+        <module>service1</module>
+        <module>service2</module>
+        <module>service3</module>
+        <module>service4</module>
     </modules>
 
     <name>cloudparent</name>
