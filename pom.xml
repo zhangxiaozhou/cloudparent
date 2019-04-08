@@ -17,7 +17,6 @@
         <module>configserver</module>
         <module>service2</module>
         <module>gateway2</module>
-        <module>zipkinserver</module>
     </modules>
 
     <name>cloudparent</name>
