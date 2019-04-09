@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    consul:
+      host: localhost
+
+security:
+  oauth2:
+    client:
+      accessTokenUri: http://localhost:8080/auth/oauth/token
+      userAuthorizationUri: http://localhost:8080/auth/oauth/authorize
+      clientId: gateway2
+      clientSecret: secret
+      authorized-grant-types: authorization_code
+    resource:
+      jwt:
+        key-uri: http://localhost:8080/auth/oauth/token_key
+      token-info-uri: http://localhost:8080/auth/oauth/check_token
+
+ribbon:
+  ReadTimeout: 20000
+  SocketTimeout: 20000
+
